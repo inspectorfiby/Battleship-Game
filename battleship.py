@@ -1,11 +1,5 @@
 from random import randint
 
-#Initializing the board
-board = []
-
-for x in range(5):
-    board.append(["O"] * 5)
-
 #Method to print the board
 def print_board(board):
     for row in board:
@@ -18,6 +12,11 @@ def random_col(board):
     return randint(0, len(board[0]) - 1)
 
 if __name__ == '__main__':
+	#Initializing the board
+	board = []
+
+	for x in range(5):
+		board.append(["O"] * 5)
 	print "Let's play Battleship!"
 	print_board(board)
 	ship_row = random_row(board)
